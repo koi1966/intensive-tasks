@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static com.walking.intensive.chapter1.task1.Task1.getAgeString;
+import static com.walking.intensive.chapter1.task1.Task1.getAgeString1;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.of;
 
@@ -16,7 +17,7 @@ class Task1Test {
     @ParameterizedTest
     @MethodSource("dataSource")
     void getAgeStringTest(String expected, Integer value) {
-        assertEquals(expected, getAgeString(value));
+        assertEquals(expected, getAgeString1(value));
     }
 
     static Stream<Arguments> dataSource() {
