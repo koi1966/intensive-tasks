@@ -11,20 +11,19 @@ public class Task8 {
         int combination;
         int sumFirstThreeDigits;
         int sumLastThreeDigits;
-
+        int i = 0;
         do {
             combination = random.nextInt(1000000);
             sumFirstThreeDigits = (combination / 100000) + ((combination / 10000) % 10) + ((combination / 1000) % 10);
             sumLastThreeDigits = ((combination / 100) % 10) + ((combination / 10) % 10) + (combination % 10);
+            i++;
         } while (sumFirstThreeDigits != sumLastThreeDigits);
 
-        System.out.println("Сгенерированная комбинация: " + String.format("%06d", combination));
+        System.out.println("Сгенерированная комбинация: " + String.format("%06d", combination) +  " - " + i);
     }
 
 
-
-
-    static double getHappyTicketChance(int ticketNumber){
+    static double getHappyTicketChance(int ticketNumber) {
         // Ваш код
         return 0.0;
     }
